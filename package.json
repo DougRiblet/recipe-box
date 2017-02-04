@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon ./server/app.js",
     "build": "webpack --watch",
+    "lint": "standard",
     "build-css": "node-sass client/scss/main.scss client/public/css/main.css"
   },
   "repository": {
