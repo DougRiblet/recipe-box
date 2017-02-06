@@ -8,7 +8,9 @@ export default class RecipeList extends React.Component {
 
   render () {
     return (
-
+      <div id='recipeList'>
+        <h2>Recipe List Column</h2>
+      </div>
     )
   }
 

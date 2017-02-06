@@ -8,7 +8,9 @@ export default class Header extends React.Component {
 
   render () {
     return (
-
+      <div id='pageHeader'>
+        <h1>Recipe Box App</h1>
+      </div>
     )
   }
 

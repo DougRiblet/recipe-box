@@ -8,7 +8,9 @@ export default class MainPane extends React.Component {
 
   render () {
     return (
-
+      <div id='mainPane'>
+        <h2>Main Pane for Individual Recipes</h2>
+      </div>
     )
   }
 
