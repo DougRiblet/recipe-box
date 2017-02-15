@@ -1,13 +1,15 @@
 
 body {
   background-color: white;
+  margin: 0;
+  padding: 0;
 }
 
 #pageHeader {
   width: 100%;
   display: block;
   margin: 0 0 30px 0;
-  padding: 0 200px;
+  padding: 24px 120px;
   background-color: olive;
   h1 {
     font-family: Verdana, Arial, Helvetica, sans-serif;
