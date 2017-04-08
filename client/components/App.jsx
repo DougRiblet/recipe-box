@@ -6,13 +6,15 @@ import MainPane from './MainPane'
 export default class App extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {}
+    this.state = {
+      header: {title: 'Recipe Box', tagline: 'An awesome React app'}
+    }
   }
 
   render () {
     return (
       <div id='insideApp'>
-        <Header />
+        <Header header={this.state.header} />
         <RecipeList />
         <MainPane />
       </div>

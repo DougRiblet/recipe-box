@@ -10,11 +10,17 @@ body {
   display: block;
   margin: 0 0 30px 0;
   padding: 24px 120px;
-  background-color: olive;
+  background-color: darkgreen;
   h1 {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     color: #eeeeee;
     text-shadow: 4px 4px 2px #333333;
+    small {
+      font-size: 67%;
+      color: #aaa8a2;
+      text-shadow: none;
+      margin-left: 12px;
+    }
   }
 }
 
