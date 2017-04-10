@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Header = ({header}) => {
+const Header = () => {
   return (
     <div id='pageHeader'>
-      <h1>{header.title} <small>{header.tagline}</small></h1>
+      <h1>Recipe Box <small>An awesome React/Redux app</small></h1>
     </div>
   )
 }

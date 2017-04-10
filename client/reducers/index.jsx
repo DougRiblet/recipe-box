@@ -1,6 +1,5 @@
-import { combineReducers } from 'redux'
 
-const initialState = {
+export const initialState = {
   recipes: [
     {
       title: 'Kale Apple Smoothie',
@@ -10,15 +9,6 @@ const initialState = {
   ]
 }
 
-const setRecipeApp = (state, action) => {
-  if (typeof state === 'undefined') {
-    return initialState
-  }
-  return state
-}
+const reducer = (state, action) => state
 
-const allRed = combineReducers({
-  setRecipeApp
-})
-
-export default allRed
+export default reducer
