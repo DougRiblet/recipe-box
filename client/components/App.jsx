@@ -4,7 +4,6 @@ import RecipeList from './RecipeList'
 import MainPane from './MainPane'
 
 export default class App extends React.Component {
-
   render () {
     return (
       <div id='insideApp'>
@@ -14,5 +13,4 @@ export default class App extends React.Component {
       </div>
     )
   }
-
 }

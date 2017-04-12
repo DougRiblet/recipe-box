@@ -1,11 +1,8 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
 import App from './components/App'
-import { createStore } from 'redux'
 import { Provider } from 'react-redux'
-import reducer, { initialState } from './reducers'
-
-const store = createStore(reducer, initialState)
+import store from './store/store'
 
 ReactDOM.render(
   <Provider store={store}>
@@ -13,5 +10,3 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('app')
 )
-
-window.store = store
