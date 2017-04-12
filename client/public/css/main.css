@@ -19,14 +19,14 @@ body {
       text-shadow: none;
       margin-left: 12px; }
 
-#recipeList {
+#pageSidebar {
   width: 240px;
   float: left;
   margin: 10px;
   padding: 20px;
   border: 1px dotted #669; }
 
-#mainPane {
+#pageContent {
   width: 660px;
   float: left;
   margin: 10px;

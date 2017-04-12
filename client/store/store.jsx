@@ -7,6 +7,8 @@ const initialState = {
     title: 'RECIPE BOX!!!',
     tagline: 'A phenomenal React/Redux app'
   },
+  active: null,
+  mode: 'display',
   recipes: []
 }
 
