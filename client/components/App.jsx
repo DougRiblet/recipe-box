@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './Header'
 import RecipeListSmart from './RecipeListSmart'
 import AddButtonSmart from './AddButtonSmart'
-import MainPane from './MainPane'
+import MainPaneSmart from './MainPaneSmart'
 
 export default class App extends React.Component {
   render () {
@@ -19,7 +19,7 @@ export default class App extends React.Component {
             <AddButtonSmart />
           </div>
           <div id='pageContent'>
-            <MainPane />
+            <MainPaneSmart />
           </div>
         </main>
       </div>

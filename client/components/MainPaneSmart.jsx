@@ -1,9 +1,14 @@
 import { connect } from 'react-redux'
-import {  } from '../actions/actions'
 import MainPaneDumb from './MainPaneDumb'
 
-const mapStateToProps = (state) => ({
+const getActiveRecipe = (arrOfObj, activeId) => {
+  return arrOfObj.find(obj => obj.id === activeId)
+}
 
+const mapStateToProps = (state) => ({
+  active: state.active,
+  mode: state.mode,
+  recipe: getActiveRecipe(state.recipes, state.active)
 })
 
 const MainPaneSmart = connect(
