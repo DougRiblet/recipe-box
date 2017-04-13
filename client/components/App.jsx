@@ -1,13 +1,13 @@
 import React from 'react'
 import Header from './Header'
-import RecipeList from './RecipeList'
-import AddRecipeForm from './AddRecipeForm'
+import RecipeListSmart from './RecipeListSmart'
+import AddButtonSmart from './AddButtonSmart'
 import MainPane from './MainPane'
 
 export default class App extends React.Component {
   render () {
     return (
-      <div id='insideApp'>
+      <div>
         <header>
           <div id='pageHeader'>
             <Header />
@@ -15,8 +15,8 @@ export default class App extends React.Component {
         </header>
         <main>
           <div id='pageSidebar'>
-            <RecipeList />
-            <AddRecipeForm />
+            <RecipeListSmart />
+            <AddButtonSmart />
           </div>
           <div id='pageContent'>
             <MainPane />

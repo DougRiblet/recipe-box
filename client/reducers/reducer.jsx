@@ -5,6 +5,10 @@ const reducer = (state, action) => {
       return Object.assign({}, state, {
         recipes: state.recipes.concat({ name: action.name })
       })
+    case 'CHANGE_ACTIVE_RECIPE':
+      return Object.assign({}, state, {
+        active: action.id
+      })
   }
   return state
 }
