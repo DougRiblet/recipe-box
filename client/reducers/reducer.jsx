@@ -15,6 +15,10 @@ const reducer = (state, action) => {
       return Object.assign({}, state, {
         active: action.id
       })
+    case 'SET_MODE':
+      return Object.assign({}, state, {
+        mode: action.mode
+      })
     default:
       return state
   }

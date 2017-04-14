@@ -41,8 +41,8 @@ body {
   }
 }
 
-#addRecipeButton {
-  width: 100%;
+#addRecipeButton, .setModeButton {
+  width: 160px;
   padding: .7em .3em;
   background-color: darkgreen;
   color: white;

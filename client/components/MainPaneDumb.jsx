@@ -10,7 +10,7 @@ function parseMarkupDangerously (input) {
   return <div dangerouslySetInnerHTML={createMarkup(input)} />
 }
 
-function generateRecipeDisplay (recipe) {
+function generateRecipeDisplay (recipe, setMode) {
   return (
     <div id='contentDisplay'>
       <h2>{recipe.title}</h2>
@@ -20,20 +20,34 @@ function generateRecipeDisplay (recipe) {
       {parseMarkupDangerously(recipe.directions)}
       <h4>Notes</h4>
       {parseMarkupDangerously(recipe.notes)}
+      <div className='mainPaneButtons'>
+        <button
+          className='setModeButton'
+          onClick={() => setMode('edit')}
+        >Edit Recipe</button>
+      </div>
     </div>
   )
 }
 
-function generateRecipeEdit (recipe) {
+function generateRecipeEdit (recipe, setMode) {
   return (
     <div id='contentEdit'>
       <h2>edit mode</h2>
+      <div className='mainPaneButtons'>
+        <button
+          className='setModeButton'
+          onClick={() => setMode('display')}
+        >Display Recipe</button>
+      </div>
     </div>
   )
 }
 
-const MainPaneDumb = ({ mode, recipe }) => (
-  mode === 'edit' ? generateRecipeEdit(recipe) : generateRecipeDisplay(recipe)
+const MainPaneDumb = ({ mode, recipe, setMode }) => (
+  mode === 'edit'
+  ? generateRecipeEdit(recipe, setMode)
+  : generateRecipeDisplay(recipe, setMode)
 )
 
 MainPaneDumb.propTypes = {
@@ -44,7 +58,8 @@ MainPaneDumb.propTypes = {
     ingredients: React.PropTypes.string,
     directions: React.PropTypes.string,
     notes: React.PropTypes.string
-  }).isRequired
+  }).isRequired,
+  setMode: React.PropTypes.func.isRequired
 }
 
 export default MainPaneDumb
