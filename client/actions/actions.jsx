@@ -1,7 +1,11 @@
 
+const generateRandom = () => String(Math.floor(Math.random() * 1000000))
+
 export const addRecipe = () => {
+  console.log('###### action reached')
   return {
-    type: 'ADD_RECIPE'
+    type: 'ADD_RECIPE',
+    id: generateRandom()
   }
 }
 

@@ -1,14 +1,14 @@
 import React from 'react'
 
-const AddButtonDumb = ({ onAddButtonClick }) => (
+const AddButtonDumb = ({ addRecipe }) => (
   <button
     id='addRecipeButton'
-    onClick={() => onAddButtonClick()}
+    onClick={() => addRecipe()}
   >Add New Recipe</button>
 )
 
 AddButtonDumb.propTypes = {
-  onAddButtonClick: React.PropTypes.func.isRequired
+  addRecipe: React.PropTypes.func.isRequired
 }
 
 export default AddButtonDumb
