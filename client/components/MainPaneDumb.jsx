@@ -10,22 +10,33 @@ function parseMarkupDangerously (input) {
   return <div dangerouslySetInnerHTML={createMarkup(input)} />
 }
 
-const MainPaneDumb = ({ active, mode, recipe }) => (
-  <div id='contentDiv'>
-    <h2>{recipe.title}</h2>
-    <h4>Ingredients</h4>
-    {parseMarkupDangerously(recipe.ingredients)}
-    <h4>Directions</h4>
-    {parseMarkupDangerously(recipe.directions)}
-    <h4>Notes</h4>
-    {parseMarkupDangerously(recipe.notes)}
-    <h4>Status</h4>
-    <p>Active: {active} | Mode: {mode}</p>
-  </div>
+function generateRecipeDisplay (recipe) {
+  return (
+    <div id='contentDisplay'>
+      <h2>{recipe.title}</h2>
+      <h4>Ingredients</h4>
+      {parseMarkupDangerously(recipe.ingredients)}
+      <h4>Directions</h4>
+      {parseMarkupDangerously(recipe.directions)}
+      <h4>Notes</h4>
+      {parseMarkupDangerously(recipe.notes)}
+    </div>
+  )
+}
+
+function generateRecipeEdit (recipe) {
+  return (
+    <div id='contentEdit'>
+      <h2>edit mode</h2>
+    </div>
+  )
+}
+
+const MainPaneDumb = ({ mode, recipe }) => (
+  mode === 'edit' ? generateRecipeEdit(recipe) : generateRecipeDisplay(recipe)
 )
 
 MainPaneDumb.propTypes = {
-  active: React.PropTypes.string.isRequired,
   mode: React.PropTypes.string.isRequired,
   recipe: React.PropTypes.shape({
     id: React.PropTypes.string.isRequired,

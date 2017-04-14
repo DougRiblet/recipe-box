@@ -6,7 +6,6 @@ const getActiveRecipe = (arrOfObj, activeId) => {
 }
 
 const mapStateToProps = (state) => ({
-  active: state.active,
   mode: state.mode,
   recipe: getActiveRecipe(state.recipes, state.active)
 })
