@@ -1,12 +1,12 @@
 import React from 'react'
 import marked from 'marked'
 
-function createMarkup(input) {
+function createMarkup (input) {
   let parsedInput = marked(input, {sanitize: true})
   return {__html: parsedInput}
 }
 
-function parseMarkupDangerously(input){
+function parseMarkupDangerously (input) {
   return <div dangerouslySetInnerHTML={createMarkup(input)} />
 }
 

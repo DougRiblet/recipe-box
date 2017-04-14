@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import { changeActiveRecipe } from '../actions/actions'
 import RecipeListDumb from './RecipeListDumb'
 
@@ -12,9 +13,9 @@ const mapStateToProps = (state) => ({
   recipeTitles: justTitlesIds(state.recipes)
 })
 
-const mapDispatchToProps = (dispatch) => ({
-  onRecipeClick: changeActiveRecipe
-})
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ changeActiveRecipe }, dispatch)
+}
 
 const RecipeListSmart = connect(
   mapStateToProps,

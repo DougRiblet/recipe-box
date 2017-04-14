@@ -1,9 +1,14 @@
 import React from 'react'
+import RecipeTitle from './RecipeTitle'
 
-const RecipeListDumb = ({ recipeTitles, onRecipeClick }) => (
+const RecipeListDumb = ({ recipeTitles, changeActiveRecipe }) => (
   <ul>
     {recipeTitles.map(item =>
-      <li onClick={() => onRecipeClick(item.id)}>{item.title}</li>
+      <RecipeTitle
+        key={item.id}
+        title={item.title}
+        changeActiveRecipe={() => changeActiveRecipe(item.id)}
+      />
     )}
   </ul>
 )
@@ -15,7 +20,7 @@ RecipeListDumb.propTypes = {
       id: React.PropTypes.string.isRequired
     })
   ),
-  onRecipeClick: React.PropTypes.func.isRequired
+  changeActiveRecipe: React.PropTypes.func.isRequired
 }
 
 export default RecipeListDumb
