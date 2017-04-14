@@ -1,6 +1,5 @@
 
 const reducer = (state, action) => {
-  console.log('+++ reducer reached!!! +++')
   switch (action.type) {
     case 'ADD_RECIPE':
       return Object.assign({}, state, {
@@ -13,7 +12,6 @@ const reducer = (state, action) => {
         })
       })
     case 'CHANGE_ACTIVE_RECIPE':
-      console.log('######reducer: ', action.id)
       return Object.assign({}, state, {
         active: action.id
       })
