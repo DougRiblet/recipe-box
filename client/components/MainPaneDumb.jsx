@@ -34,6 +34,14 @@ function generateRecipeEdit (recipe, setMode) {
   return (
     <div id='contentEdit'>
       <h2>edit mode</h2>
+      <h4>Recipe Title (required)</h4>
+      <textarea name='rTitle' id='rTitle'>{recipe.title}</textarea>
+      <h4>Ingredients (required)</h4>
+      <textarea name='rIngredients' id='rIngredients'>{recipe.ingredients}</textarea>
+      <h4>Directions (required)</h4>
+      <textarea name='rDirections' id='rDirections'>{recipe.directions}</textarea>
+      <h4>Notes (optional)</h4>
+      <textarea name='rNotes' id='rNotes'>{recipe.notes}</textarea>
       <div className='mainPaneButtons'>
         <button
           className='setModeButton'

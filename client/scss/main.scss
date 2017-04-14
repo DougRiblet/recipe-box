@@ -55,6 +55,13 @@ body {
   }
 }
 
+#contentEdit textarea {
+  width: 80%;
+  &#rTitle { height: 20px; }
+  &#rIngredients, &#rDirections { height: 150px; }
+  &#rNotes { height: 54px}
+}
+
 #pageContent {
   width: 660px;
   float: left;

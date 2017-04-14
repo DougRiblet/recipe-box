@@ -45,6 +45,15 @@ body {
   #addRecipeButton:hover, .setModeButton:hover {
     background-color: green; }
 
+#contentEdit textarea {
+  width: 80%; }
+  #contentEdit textarea#rTitle {
+    height: 20px; }
+  #contentEdit textarea#rIngredients, #contentEdit textarea#rDirections {
+    height: 150px; }
+  #contentEdit textarea#rNotes {
+    height: 54px; }
+
 #pageContent {
   width: 660px;
   float: left;
