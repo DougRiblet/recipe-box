@@ -22,3 +22,11 @@ export const setMode = (mode) => {
   }
 }
 
+export const updateRecipe = (recipe) => {
+  return {
+    type: 'UPDATE_RECIPE',
+    recipe: recipe,
+    mode: 'display',
+    active: recipe.id
+  }
+}

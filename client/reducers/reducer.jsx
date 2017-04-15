@@ -19,6 +19,21 @@ const reducer = (state, action) => {
       return Object.assign({}, state, {
         mode: action.mode
       })
+    case 'UPDATE_RECIPE':
+      let newObj = state.recipes.map(function (rec) {
+        if (rec.id === action.recipe.id) {
+          rec.title = action.recipe.title
+          rec.ingredients = action.recipe.ingredients
+          rec.directions = action.recipe.directions
+          rec.note = action.recipe.notes
+        }
+        return rec
+      })
+      return Object.assign({}, state, {
+        recipes: newObj,
+        mode: action.mode,
+        active: action.active
+      })
     default:
       return state
   }

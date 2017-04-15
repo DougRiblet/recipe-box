@@ -1,5 +1,6 @@
 import React from 'react'
 import marked from 'marked'
+import MainPaneEdit from './MainPaneEdit'
 
 function createMarkup (input) {
   let parsedInput = marked(input, {sanitize: true})
@@ -30,31 +31,18 @@ function generateRecipeDisplay (recipe, setMode) {
   )
 }
 
-function generateRecipeEdit (recipe, setMode) {
+function generateRecipeEdit (recipe, updateRecipe) {
   return (
-    <div id='contentEdit'>
-      <h2>edit mode</h2>
-      <h4>Recipe Title (required)</h4>
-      <textarea name='rTitle' id='rTitle'>{recipe.title}</textarea>
-      <h4>Ingredients (required)</h4>
-      <textarea name='rIngredients' id='rIngredients'>{recipe.ingredients}</textarea>
-      <h4>Directions (required)</h4>
-      <textarea name='rDirections' id='rDirections'>{recipe.directions}</textarea>
-      <h4>Notes (optional)</h4>
-      <textarea name='rNotes' id='rNotes'>{recipe.notes}</textarea>
-      <div className='mainPaneButtons'>
-        <button
-          className='setModeButton'
-          onClick={() => setMode('display')}
-        >Display Recipe</button>
-      </div>
-    </div>
+    <MainPaneEdit
+      recipe={recipe}
+      updateRecipe={updateRecipe}
+    />
   )
 }
 
-const MainPaneDumb = ({ mode, recipe, setMode }) => (
+const MainPaneDumb = ({ mode, recipe, setMode, updateRecipe }) => (
   mode === 'edit'
-  ? generateRecipeEdit(recipe, setMode)
+  ? generateRecipeEdit(recipe, updateRecipe)
   : generateRecipeDisplay(recipe, setMode)
 )
 
@@ -67,7 +55,8 @@ MainPaneDumb.propTypes = {
     directions: React.PropTypes.string,
     notes: React.PropTypes.string
   }).isRequired,
-  setMode: React.PropTypes.func.isRequired
+  setMode: React.PropTypes.func.isRequired,
+  updateRecipe: React.PropTypes.func.isRequired
 }
 
 export default MainPaneDumb
