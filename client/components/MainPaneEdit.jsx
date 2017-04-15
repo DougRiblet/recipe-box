@@ -9,6 +9,26 @@ export default class MainPaneEdit extends React.Component {
       rDirections: this.props.recipe.directions,
       rNotes: this.props.recipe.notes
     }
+    this.handleChangeTitle = this.handleChangeTitle.bind(this)
+    this.handleChangeIngredients = this.handleChangeIngredients.bind(this)
+    this.handleChangeDirections = this.handleChangeDirections.bind(this)
+    this.handleChangeNotes = this.handleChangeNotes.bind(this)
+  }
+
+  handleChangeTitle (event) {
+    this.setState({rTitle: event.target.value})
+  }
+
+  handleChangeIngredients (event) {
+    this.setState({rIngredients: event.target.value})
+  }
+
+  handleChangeDirections (event) {
+    this.setState({rDirections: event.target.value})
+  }
+
+  handleChangeNotes (event) {
+    this.setState({rNotes: event.target.value})
   }
 
   render () {
@@ -19,21 +39,25 @@ export default class MainPaneEdit extends React.Component {
         <textarea
           value={this.state.rTitle}
           id='rTitle'
+          onChange={this.handleChangeTitle}
         />
         <h4>Ingredients (required)</h4>
         <textarea
           value={this.state.rIngredients}
           id='rIngredients'
+          onChange={this.handleChangeIngredients}
         />
         <h4>Directions (required)</h4>
         <textarea
           value={this.state.rDirections}
           id='rDirections'
+          onChange={this.handleChangeDirections}
         />
         <h4>Notes (optional)</h4>
         <textarea
           value={this.state.rNotes}
           id='rNotes'
+          onChange={this.handleChangeNotes}
         />
         <div className='mainPaneButtons'>
           <button
