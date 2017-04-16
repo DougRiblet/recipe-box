@@ -2,9 +2,12 @@
 const generateRandom = () => String(Math.floor(Math.random() * 1000000))
 
 export const addRecipe = () => {
+  let newId = generateRandom()
   return {
     type: 'ADD_RECIPE',
-    id: generateRandom()
+    id: newId,
+    active: newId,
+    mode: 'edit'
   }
 }
 

@@ -1,6 +1,12 @@
 
-const reducer = (state, action) => {
+import initialState from '../initialState/initialState'
+
+const reducer = (state={}, action) => {
   switch (action.type) {
+    case 'persist/REHYDRATE':
+      let savedData = action.payload
+      if (!savedData.hasOwnProperty('recipes')) { savedData = initialState }
+      return {...state, ...savedData}
     case 'ADD_RECIPE':
       return Object.assign({}, state, {
         recipes: state.recipes.concat({
@@ -9,7 +15,9 @@ const reducer = (state, action) => {
           ingredients: 'add ingredients',
           directions: 'provide directions',
           notes: 'optional notes'
-        })
+        }),
+        mode: action.mode,
+        active: action.active
       })
     case 'CHANGE_ACTIVE_RECIPE':
       return Object.assign({}, state, {
@@ -25,7 +33,7 @@ const reducer = (state, action) => {
           rec.title = action.recipe.title
           rec.ingredients = action.recipe.ingredients
           rec.directions = action.recipe.directions
-          rec.note = action.recipe.notes
+          rec.notes = action.recipe.notes
         }
         return rec
       })
