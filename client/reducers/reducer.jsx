@@ -1,7 +1,7 @@
 
 import initialState from '../initialState/initialState'
 
-const reducer = (state={}, action) => {
+const reducer = (state = {}, action) => {
   switch (action.type) {
     case 'persist/REHYDRATE':
       let savedData = action.payload

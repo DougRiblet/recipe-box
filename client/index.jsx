@@ -10,19 +10,19 @@ import logger from 'redux-logger'
 const store = compose(autoRehydrate(), applyMiddleware(logger))(createStore)(reducer)
 
 class AppShell extends React.Component {
-  constructor() {
+  constructor () {
     super()
     this.state = { rehydrated: false }
   }
 
-  componentWillMount(){
+  componentWillMount () {
     persistStore(store, {}, () => {
       this.setState({ rehydrated: true })
     })
   }
 
-  render() {
-    if(!this.state.rehydrated){
+  render () {
+    if (!this.state.rehydrated) {
       return <div>Loading...</div>
     }
     return (
