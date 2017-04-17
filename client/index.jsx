@@ -34,8 +34,6 @@ class AppShell extends React.Component {
 }
 
 ReactDOM.render(
-  <Provider store={store}>
-    <AppShell />
-  </Provider>,
+  <AppShell />,
   document.getElementById('app')
 )
