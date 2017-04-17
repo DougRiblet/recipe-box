@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { setMode, updateRecipe } from '../actions/actions'
+import { setMode, updateRecipe, deleteRecipe } from '../actions/actions'
 import MainPaneDumb from './MainPaneDumb'
 
 const getActiveRecipe = (arrOfObj, activeId) => {
@@ -13,7 +13,7 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ setMode, updateRecipe }, dispatch)
+  return bindActionCreators({ setMode, updateRecipe, deleteRecipe }, dispatch)
 }
 
 const MainPaneSmart = connect(

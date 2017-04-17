@@ -33,3 +33,10 @@ export const updateRecipe = (recipe) => {
     active: recipe.id
   }
 }
+
+export const deleteRecipe = (id) => {
+  return {
+    type: 'DELETE_RECIPE',
+    id: id
+  }
+}

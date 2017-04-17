@@ -61,7 +61,7 @@ export default class MainPaneEdit extends React.Component {
         />
         <div className='mainPaneButtons'>
           <button
-            className='saveChangesButton'
+            id='saveChangesButton'
             onClick={() => this.props.updateRecipe({
               id: this.props.recipe.id,
               title: this.state.rTitle,
@@ -70,6 +70,14 @@ export default class MainPaneEdit extends React.Component {
               notes: this.state.rNotes
             })}
           >Save Changes</button>
+          <button
+            id='discardChangesButton'
+            onClick={() => this.props.setMode('display')}
+          >Discard Changes</button>
+          <button
+            id='deleteRecipeButton'
+            onClick={() => this.props.deleteRecipe(this.props.recipe.id)}
+          >Delete Recipe</button>
         </div>
       </div>
     )
@@ -84,5 +92,7 @@ MainPaneEdit.propTypes = {
     directions: React.PropTypes.string,
     notes: React.PropTypes.string
   }).isRequired,
-  updateRecipe: React.PropTypes.func.isRequired
+  updateRecipe: React.PropTypes.func.isRequired,
+  deleteRecipe: React.PropTypes.func.isRequired,
+  setMode: React.PropTypes.func.isRequired
 }

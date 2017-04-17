@@ -51,7 +51,7 @@ body {
 #pageSidebar {
   width: 25%;
   float: left;
-  margin: 0;
+  margin: 0 0 40px 0;
   padding: 20px;
   box-sizing: border-box;
   background-color: #eee;
@@ -67,7 +67,7 @@ body {
   }
 }
 
-#addRecipeButton, .setModeButton {
+button {
   width: 160px;
   padding: .7em .3em;
   background-color: $green1;
@@ -76,6 +76,9 @@ body {
   border-radius: 5px;
   margin-top: 2em;
   cursor: pointer;
+  &#deleteRecipeButton, &#discardChangesButton {
+    margin-left: 40px;
+  }
   &:hover {
     background-color: $green2;
   }
@@ -83,6 +86,8 @@ body {
 
 #contentEdit textarea {
   width: 80%;
+  padding: 4px 6px;
+  border: 1px solid #bbb;
   &#rTitle { height: 20px; }
   &#rIngredients, &#rDirections { height: 150px; }
   &#rNotes { height: 54px}
@@ -91,7 +96,7 @@ body {
 #pageContent {
   width: 68%;
   float: left;
-  margin: 0 0 0 40px;
+  margin: 0 0 40px 40px;
   padding: 20px 40px;
   box-sizing: border-box;
   background-color: white;

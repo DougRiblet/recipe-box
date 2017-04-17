@@ -40,7 +40,7 @@ body {
 #pageSidebar {
   width: 25%;
   float: left;
-  margin: 0;
+  margin: 0 0 40px 0;
   padding: 20px;
   box-sizing: border-box;
   background-color: #eee;
@@ -53,7 +53,7 @@ body {
       margin: 0 0 1em 0;
       padding: 0; }
 
-#addRecipeButton, .setModeButton {
+button {
   width: 160px;
   padding: .7em .3em;
   background-color: darkgreen;
@@ -62,11 +62,15 @@ body {
   border-radius: 5px;
   margin-top: 2em;
   cursor: pointer; }
-  #addRecipeButton:hover, .setModeButton:hover {
+  button#deleteRecipeButton, button#discardChangesButton {
+    margin-left: 40px; }
+  button:hover {
     background-color: green; }
 
 #contentEdit textarea {
-  width: 80%; }
+  width: 80%;
+  padding: 4px 6px;
+  border: 1px solid #bbb; }
   #contentEdit textarea#rTitle {
     height: 20px; }
   #contentEdit textarea#rIngredients, #contentEdit textarea#rDirections {
@@ -77,7 +81,7 @@ body {
 #pageContent {
   width: 68%;
   float: left;
-  margin: 0 0 0 40px;
+  margin: 0 0 40px 40px;
   padding: 20px 40px;
   box-sizing: border-box;
   background-color: white;

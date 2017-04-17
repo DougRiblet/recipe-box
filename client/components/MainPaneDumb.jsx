@@ -31,18 +31,20 @@ function generateRecipeDisplay (recipe, setMode) {
   )
 }
 
-function generateRecipeEdit (recipe, updateRecipe) {
+function generateRecipeEdit (recipe, updateRecipe, deleteRecipe, setMode) {
   return (
     <MainPaneEdit
       recipe={recipe}
       updateRecipe={updateRecipe}
+      deleteRecipe={deleteRecipe}
+      setMode={setMode}
     />
   )
 }
 
-const MainPaneDumb = ({ mode, recipe, setMode, updateRecipe }) => (
+const MainPaneDumb = ({ mode, recipe, setMode, updateRecipe, deleteRecipe }) => (
   mode === 'edit'
-  ? generateRecipeEdit(recipe, updateRecipe)
+  ? generateRecipeEdit(recipe, updateRecipe, deleteRecipe, setMode)
   : generateRecipeDisplay(recipe, setMode)
 )
 
@@ -56,7 +58,8 @@ MainPaneDumb.propTypes = {
     notes: React.PropTypes.string
   }).isRequired,
   setMode: React.PropTypes.func.isRequired,
-  updateRecipe: React.PropTypes.func.isRequired
+  updateRecipe: React.PropTypes.func.isRequired,
+  deleteRecipe: React.PropTypes.func.isRequired
 }
 
 export default MainPaneDumb
