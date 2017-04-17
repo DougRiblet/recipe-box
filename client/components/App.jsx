@@ -9,17 +9,23 @@ export default class App extends React.Component {
     return (
       <div>
         <header>
-          <div id='pageHeader'>
-            <Header />
+          <div id='headerContainer'>
+            <div id='pageHeader'>
+              <Header />
+            </div>
           </div>
         </header>
         <main>
-          <div id='pageSidebar'>
-            <RecipeListSmart />
-            <AddButtonSmart />
-          </div>
-          <div id='pageContent'>
-            <MainPaneSmart />
+          <div id='mainContainer'>
+            <div id='pageMain'>
+              <div id='pageSidebar'>
+                <RecipeListSmart />
+                <AddButtonSmart />
+              </div>
+              <div id='pageContent'>
+                <MainPaneSmart />
+              </div>
+            </div>
           </div>
         </main>
       </div>

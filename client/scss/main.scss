@@ -1,16 +1,26 @@
 
+$green1: darkgreen;
+$green2: green;
+
 body {
-  background-color: white;
+  background-color: #bbb;
   margin: 0;
   padding: 0;
+  text-align: center;
+}
+
+#headerContainer {
+  width: 100%;
+  display: block;
+  margin: 0;
+  background-color: $green1;
 }
 
 #pageHeader {
-  width: 100%;
-  display: block;
-  margin: 0 0 30px 0;
+  max-width: 1060px;
   padding: 24px 120px;
-  background-color: darkgreen;
+  margin: 0 auto;
+  text-align: left;
   h1 {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     color: #eeeeee;
@@ -24,12 +34,28 @@ body {
   }
 }
 
+#mainContainer {
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#pageMain {
+  max-width: 1060px;
+  padding: 30px 0px;
+  margin: 0 auto;
+  text-align: left;
+}
+
 #pageSidebar {
-  width: 240px;
+  width: 25%;
   float: left;
-  margin: 10px;
+  margin: 0;
   padding: 20px;
-  border: 1px dotted #669;
+  box-sizing: border-box;
+  background-color: #eee;
+  border-radius: 10px;
   ul {
     list-style-type: none;
     padding: 1em 0;
@@ -44,14 +70,14 @@ body {
 #addRecipeButton, .setModeButton {
   width: 160px;
   padding: .7em .3em;
-  background-color: darkgreen;
+  background-color: $green1;
   color: white;
   border: none;
   border-radius: 5px;
   margin-top: 2em;
   cursor: pointer;
   &:hover {
-    background-color: green;
+    background-color: $green2;
   }
 }
 
@@ -63,9 +89,11 @@ body {
 }
 
 #pageContent {
-  width: 660px;
+  width: 68%;
   float: left;
-  margin: 10px;
-  padding: 20px;
-  border: 1px dotted #669;
+  margin: 0 0 0 40px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 10px;
 }
