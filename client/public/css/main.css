@@ -1,5 +1,8 @@
+html {
+  background: url("images/chillis.jpg") no-repeat center fixed;
+  background-size: cover; }
+
 body {
-  background-color: #bbb;
   margin: 0;
   padding: 0;
   text-align: center; }
@@ -12,7 +15,7 @@ body {
 
 #pageHeader {
   max-width: 1060px;
-  padding: 24px 120px;
+  padding: 4px 120px;
   margin: 0 auto;
   text-align: left; }
   #pageHeader h1 {
