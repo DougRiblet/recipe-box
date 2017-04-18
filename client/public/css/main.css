@@ -11,7 +11,7 @@ body {
   width: 100%;
   display: block;
   margin: 0;
-  background-color: darkgreen; }
+  background-color: darkred; }
 
 #pageHeader {
   max-width: 1060px;
@@ -59,7 +59,7 @@ body {
 button {
   width: 160px;
   padding: .7em .3em;
-  background-color: darkgreen;
+  background-color: darkred;
   color: white;
   border: none;
   border-radius: 5px;
@@ -68,7 +68,7 @@ button {
   button#deleteRecipeButton, button#discardChangesButton {
     margin-left: 40px; }
   button:hover {
-    background-color: green; }
+    background-color: firebrick; }
 
 #contentEdit textarea {
   width: 80%;

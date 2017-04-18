@@ -70,14 +70,18 @@ export default class MainPaneEdit extends React.Component {
               notes: this.state.rNotes
             })}
           >Save Changes</button>
+
           <button
             id='discardChangesButton'
             onClick={() => this.props.setMode('display')}
           >Discard Changes</button>
-          <button
-            id='deleteRecipeButton'
-            onClick={() => this.props.deleteRecipe(this.props.recipe.id)}
-          >Delete Recipe</button>
+
+          {this.props.deleteAllowed &&
+            <button
+              id='deleteRecipeButton'
+              onClick={() => this.props.deleteRecipe(this.props.recipe.id)}
+            >Delete Recipe</button>
+          }
         </div>
       </div>
     )
@@ -93,6 +97,7 @@ MainPaneEdit.propTypes = {
     notes: React.PropTypes.string
   }).isRequired,
   updateRecipe: React.PropTypes.func.isRequired,
+  deleteAllowed: React.PropTypes.bool.isRequired,
   deleteRecipe: React.PropTypes.func.isRequired,
   setMode: React.PropTypes.func.isRequired
 }

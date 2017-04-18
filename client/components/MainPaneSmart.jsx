@@ -7,9 +7,14 @@ const getActiveRecipe = (arrOfObj, activeId) => {
   return arrOfObj.find(obj => obj.id === activeId)
 }
 
+const determineDeleteAllowed = (recipes) => {
+  return recipes.length > 1
+}
+
 const mapStateToProps = (state) => ({
   mode: state.mode,
-  recipe: getActiveRecipe(state.recipes, state.active)
+  recipe: getActiveRecipe(state.recipes, state.active),
+  deleteAllowed: determineDeleteAllowed(state.recipes)
 })
 
 const mapDispatchToProps = (dispatch) => {

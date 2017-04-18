@@ -1,6 +1,6 @@
 
-$green1: darkgreen;
-$green2: green;
+$main1: darkred;
+$main2: firebrick;
 
 html {
   background: url('images/chillis.jpg') no-repeat center fixed; 
@@ -17,7 +17,7 @@ body {
   width: 100%;
   display: block;
   margin: 0;
-  background-color: $green1;
+  background-color: $main1;
 }
 
 #pageHeader {
@@ -74,7 +74,7 @@ body {
 button {
   width: 160px;
   padding: .7em .3em;
-  background-color: $green1;
+  background-color: $main1;
   color: white;
   border: none;
   border-radius: 5px;
@@ -84,7 +84,7 @@ button {
     margin-left: 40px;
   }
   &:hover {
-    background-color: $green2;
+    background-color: $main2;
   }
 }
 
