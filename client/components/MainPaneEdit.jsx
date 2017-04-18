@@ -34,6 +34,7 @@ export default class MainPaneEdit extends React.Component {
   render () {
     return (
       <div id='contentEdit'>
+        <h2>Edit Recipe</h2>
         <h4>Recipe Title (required)</h4>
         <textarea
           value={this.state.rTitle}
