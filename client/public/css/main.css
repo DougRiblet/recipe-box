@@ -1,5 +1,5 @@
 html {
-  background: url("images/chillis.jpg") no-repeat center fixed;
+  background: url("images/peas-bg.jpg") no-repeat center fixed;
   background-size: cover; }
 
 body {
@@ -11,7 +11,7 @@ body {
   width: 100%;
   display: block;
   margin: 0;
-  background-color: darkred; }
+  background-color: darkgreen; }
 
 #pageHeader {
   max-width: 1060px;
@@ -59,8 +59,7 @@ body {
 button {
   width: 140px;
   padding: 6px 2px;
-  background-color: darkred;
-  font-size: 9px;
+  background-color: darkgreen;
   color: white;
   border: none;
   border-radius: 5px;
@@ -69,7 +68,7 @@ button {
   button#deleteRecipeButton, button#discardChangesButton {
     margin-left: 40px; }
   button:hover {
-    background-color: firebrick; }
+    background-color: green; }
 
 #contentEdit textarea {
   width: 80%;
