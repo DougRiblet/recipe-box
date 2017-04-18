@@ -57,9 +57,10 @@ body {
       padding: 0; }
 
 button {
-  width: 160px;
-  padding: .7em .3em;
+  width: 140px;
+  padding: 6px 2px;
   background-color: darkred;
+  font-size: 9px;
   color: white;
   border: none;
   border-radius: 5px;
@@ -73,6 +74,7 @@ button {
 #contentEdit textarea {
   width: 80%;
   padding: 4px 6px;
+  background-color: white;
   border: 1px solid #bbb; }
   #contentEdit textarea#rTitle {
     height: 20px; }
