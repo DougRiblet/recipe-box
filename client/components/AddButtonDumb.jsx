@@ -1,10 +1,12 @@
 import React from 'react'
 
 const AddButtonDumb = ({ addRecipe }) => (
-  <button
-    id='addRecipeButton'
-    onClick={() => addRecipe()}
-  >Add New Recipe</button>
+  <div id='add-recipe-div'>
+    <button
+      id='addRecipeButton'
+      onClick={() => addRecipe()}
+    >Add New Recipe</button>
+  </div>
 )
 
 AddButtonDumb.propTypes = {

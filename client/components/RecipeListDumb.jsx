@@ -2,15 +2,17 @@ import React from 'react'
 import RecipeTitle from './RecipeTitle'
 
 const RecipeListDumb = ({ recipeTitles, changeActiveRecipe }) => (
-  <ul>
-    {recipeTitles.map(item =>
-      <RecipeTitle
-        key={item.id}
-        title={item.title}
-        changeActiveRecipe={() => changeActiveRecipe(item.id)}
-      />
-    )}
-  </ul>
+  <div id='recipe-list-div'>
+    <ul>
+      {recipeTitles.map(item =>
+        <RecipeTitle
+          key={item.id}
+          title={item.title}
+          changeActiveRecipe={() => changeActiveRecipe(item.id)}
+        />
+      )}
+    </ul>
+  </div>
 )
 
 RecipeListDumb.propTypes = {

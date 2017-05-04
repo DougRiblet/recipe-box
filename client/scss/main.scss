@@ -3,7 +3,7 @@ $main1: darkgreen;
 $main2: green;
 
 html {
-  background: url('images/peas-bg.jpg') no-repeat center fixed; 
+  background: url('images/peas-bg4.jpg') no-repeat center fixed; 
   background-size: cover;
 }
 
@@ -13,42 +13,11 @@ body {
   text-align: center;
 }
 
-#headerContainer {
-  width: 100%;
-  display: block;
-  margin: 0;
-  background-color: $main1;
-}
-
-#pageHeader {
-  max-width: 1060px;
-  padding: 4px 120px;
-  margin: 0 auto;
-  text-align: left;
-  h1 {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    color: #eeeeee;
-    text-shadow: 4px 4px 2px #333333;
-    small {
-      font-size: 67%;
-      color: #aaa8a2;
-      text-shadow: none;
-      margin-left: 12px;
-    }
-  }
-}
-
 #mainContainer {
-  width: 100%;
   display: block;
-  margin: 0;
-  padding: 0;
-}
-
-#pageMain {
-  max-width: 1060px;
+  max-width: 1160px;
   padding: 30px 0px;
-  margin: 0 auto;
+  margin: 30px auto;
   text-align: left;
 }
 
@@ -56,19 +25,46 @@ body {
   width: 25%;
   float: left;
   margin: 0 0 40px 0;
-  padding: 20px;
+  padding: 0;
   box-sizing: border-box;
-  background-color: #eee;
-  border-radius: 10px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+#recipe-box-header {
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  margin: 0;
+  background-color: $main1;
+  h1 {
+    color: white;
+  }
+}
+
+#recipe-list-div {
+  background-color: white;
+  margin: 0;
+  padding: 0;
   ul {
     list-style-type: none;
     padding: 1em 0;
+    margin: 0;
     li {
       cursor: pointer;
-      margin: 0 0 1em 0;
-      padding: 0;
+      margin: 0;
+      padding: 10px 20px;
+      color: $main1;
+      &:hover {
+        background-color: #eeeeee;
+      }
     }
   }
+}
+
+#add-recipe-div {
+  margin: 0;
+  padding: 20px;
+  border-radius: 0 0 20px 20px;
 }
 
 button {
@@ -83,6 +79,9 @@ button {
   &#deleteRecipeButton, &#discardChangesButton {
     margin-left: 40px;
   }
+  &#addRecipeButton {
+    margin-top: 0;
+  }
   &:hover {
     background-color: $main2;
   }
@@ -93,6 +92,7 @@ button {
   padding: 4px 6px;
   background-color: white;
   border: 1px solid #bbb;
+  border-radius: 20px;
   &#rTitle { height: 20px; }
   &#rIngredients, &#rDirections { height: 150px; }
   &#rNotes { height: 54px}
@@ -105,5 +105,5 @@ button {
   padding: 20px 40px;
   box-sizing: border-box;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 20px;
 }

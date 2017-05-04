@@ -1,5 +1,5 @@
 html {
-  background: url("images/peas-bg.jpg") no-repeat center fixed;
+  background: url("images/peas-bg4.jpg") no-repeat center fixed;
   background-size: cover; }
 
 body {
@@ -7,54 +7,50 @@ body {
   padding: 0;
   text-align: center; }
 
-#headerContainer {
-  width: 100%;
-  display: block;
-  margin: 0;
-  background-color: darkgreen; }
-
-#pageHeader {
-  max-width: 1060px;
-  padding: 4px 120px;
-  margin: 0 auto;
-  text-align: left; }
-  #pageHeader h1 {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    color: #eeeeee;
-    text-shadow: 4px 4px 2px #333333; }
-    #pageHeader h1 small {
-      font-size: 67%;
-      color: #aaa8a2;
-      text-shadow: none;
-      margin-left: 12px; }
-
 #mainContainer {
-  width: 100%;
   display: block;
-  margin: 0;
-  padding: 0; }
-
-#pageMain {
-  max-width: 1060px;
+  max-width: 1160px;
   padding: 30px 0px;
-  margin: 0 auto;
+  margin: 30px auto;
   text-align: left; }
 
 #pageSidebar {
   width: 25%;
   float: left;
   margin: 0 0 40px 0;
-  padding: 20px;
+  padding: 0;
   box-sizing: border-box;
-  background-color: #eee;
-  border-radius: 10px; }
-  #pageSidebar ul {
+  background-color: white;
+  border-radius: 20px; }
+
+#recipe-box-header {
+  padding: 20px;
+  border-radius: 20px 20px 0 0;
+  margin: 0;
+  background-color: darkgreen; }
+  #recipe-box-header h1 {
+    color: white; }
+
+#recipe-list-div {
+  background-color: white;
+  margin: 0;
+  padding: 0; }
+  #recipe-list-div ul {
     list-style-type: none;
-    padding: 1em 0; }
-    #pageSidebar ul li {
+    padding: 1em 0;
+    margin: 0; }
+    #recipe-list-div ul li {
       cursor: pointer;
-      margin: 0 0 1em 0;
-      padding: 0; }
+      margin: 0;
+      padding: 10px 20px;
+      color: darkgreen; }
+      #recipe-list-div ul li:hover {
+        background-color: #eeeeee; }
+
+#add-recipe-div {
+  margin: 0;
+  padding: 20px;
+  border-radius: 0 0 20px 20px; }
 
 button {
   width: 140px;
@@ -67,6 +63,8 @@ button {
   cursor: pointer; }
   button#deleteRecipeButton, button#discardChangesButton {
     margin-left: 40px; }
+  button#addRecipeButton {
+    margin-top: 0; }
   button:hover {
     background-color: green; }
 
@@ -74,7 +72,8 @@ button {
   width: 80%;
   padding: 4px 6px;
   background-color: white;
-  border: 1px solid #bbb; }
+  border: 1px solid #bbb;
+  border-radius: 20px; }
   #contentEdit textarea#rTitle {
     height: 20px; }
   #contentEdit textarea#rIngredients, #contentEdit textarea#rDirections {
@@ -89,4 +88,4 @@ button {
   padding: 20px 40px;
   box-sizing: border-box;
   background-color: white;
-  border-radius: 10px; }
+  border-radius: 20px; }
