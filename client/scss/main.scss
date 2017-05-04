@@ -3,7 +3,7 @@ $main1: darkgreen;
 $main2: green;
 
 html {
-  background: url('images/peas-bg4.jpg') no-repeat center fixed; 
+  background: url('images/peas-bg3.jpg') no-repeat center fixed; 
   background-size: cover;
 }
 
@@ -32,12 +32,15 @@ body {
 }
 
 #recipe-box-header {
-  padding: 20px;
+  padding: 2px 20px;
   border-radius: 20px 20px 0 0;
   margin: 0;
   background-color: $main1;
   h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
     color: white;
+    margin: 4px 0px;
   }
 }
 
@@ -51,6 +54,8 @@ body {
     margin: 0;
     li {
       cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
       margin: 0;
       padding: 10px 20px;
       color: $main1;
@@ -90,9 +95,12 @@ button {
 #contentEdit textarea {
   width: 80%;
   padding: 4px 6px;
+  margin-bottom: 1em;
   background-color: white;
   border: 1px solid #bbb;
-  border-radius: 20px;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   &#rTitle { height: 20px; }
   &#rIngredients, &#rDirections { height: 150px; }
   &#rNotes { height: 54px}
@@ -103,7 +111,41 @@ button {
   float: left;
   margin: 0 0 40px 40px;
   padding: 20px 40px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
   box-sizing: border-box;
   background-color: white;
   border-radius: 20px;
+  h1 {
+    color: $main1;
+  }
+  h4 {
+    color: $main2;
+    padding: 1px 0;
+    margin: 0.2em 0;
+    font-size: 9px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  #ing-column {
+    float: left;
+    width: 210px;
+    margin: 0;
+    padding: 0 50px 0 0;
+  }
+  #dir-column {
+    float: left;
+    width: 380px;
+    margin: 0;
+    padding: 0 20px 0 0;
+    ol {
+      margin: 0 0 0 16px;
+      padding: 0;
+    }
+  }
+}
+
+.mainPaneButtons {
+  clear: both;
+  display: block;
 }

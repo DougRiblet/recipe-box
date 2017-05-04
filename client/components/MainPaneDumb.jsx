@@ -14,13 +14,17 @@ function parseMarkupDangerously (input) {
 function generateRecipeDisplay (recipe, setMode) {
   return (
     <div id='contentDisplay'>
-      <h2>{recipe.title}</h2>
-      <h4>Ingredients</h4>
-      {parseMarkupDangerously(recipe.ingredients)}
-      <h4>Directions</h4>
-      {parseMarkupDangerously(recipe.directions)}
-      <h4>Notes</h4>
-      {parseMarkupDangerously(recipe.notes)}
+      <h1>{recipe.title}</h1>
+      <div id='ing-column'>
+        <h4>Ingredients</h4>
+        {parseMarkupDangerously(recipe.ingredients)}
+      </div>
+      <div id='dir-column'>
+        <h4>Directions</h4>
+        {parseMarkupDangerously(recipe.directions)}
+        <h4>Notes</h4>
+        {parseMarkupDangerously(recipe.notes)}
+      </div>
       <div className='mainPaneButtons'>
         <button
           className='setModeButton'
