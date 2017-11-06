@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderBox renders correctly 1`] = `
+<div
+  id="recipe-box-header"
+>
+  <h1>
+    Recipe Box
+  </h1>
+</div>
+`;
