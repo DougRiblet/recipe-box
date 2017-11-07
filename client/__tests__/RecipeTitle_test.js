@@ -14,4 +14,13 @@ describe('RecipeTitle', () => {
     ).toJSON()
     expect(RecipeTitle_tree).toMatchSnapshot()
   })
+
+  test('renders without crashing', () => {
+    const div = document.createElement('div')
+    ReactDOM.render(<RecipeTitle
+      key={'0123456'}
+      title={'string'}
+      changeActiveRecipe={() => changeActiveRecipe('0123456')}
+    />, div)
+  })
 })
