@@ -33,6 +33,5 @@ describe('RecipeTitle', () => {
     />)
     const displayedLI = <li onClick={changeActiveRecipe}>Kind Veggie Burrito</li>
     expect(sampleComponent.contains(displayedLI)).toEqual(true)
-  });
-
+  })
 })

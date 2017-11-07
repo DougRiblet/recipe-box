@@ -11,7 +11,7 @@
     "build-css": "node-sass client/scss/main.scss client/public/css/main.css"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "client/__tests__/enzyme_adapter.js",
+    "setupTestFrameworkScriptFile": "./client/__tests__/enzyme_adapter.js"
   },
   "repository": {
     "type": "git",
@@ -39,6 +39,7 @@
     "babel-preset-latest": "^6.22.0",
     "babel-preset-react": "^6.22.0",
     "enzyme": "^3.1.1",
+    "enzyme-adapter-react-15": "^1.0.5",
     "jest": "^21.2.1",
     "node-sass": "^4.3.0",
     "react-test-renderer": "^15.4.2",
