@@ -1,7 +1,8 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
-import RecipeTitle from '../components/RecipeTitle'
 import ReactDOM from 'react-dom'
+import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
+import RecipeTitle from '../components/RecipeTitle'
 
 describe('RecipeTitle', () => {
   test('renders correctly', () => {
@@ -23,4 +24,15 @@ describe('RecipeTitle', () => {
       changeActiveRecipe={() => changeActiveRecipe('0123456')}
     />, div)
   })
+
+  test('should display the passed title', () => {
+    const sampleComponent = shallow(<RecipeTitle
+      key={'0123456'}
+      title={'Kind Veggie Burrito'}
+      changeActiveRecipe={() => changeActiveRecipe('0123456')}
+    />)
+    const displayedLI = <li onClick={changeActiveRecipe}>Kind Veggie Burrito</li>
+    expect(sampleComponent.contains(displayedLI)).toEqual(true)
+  });
+
 })

@@ -1,7 +1,7 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
 import HeaderBox from '../components/HeaderBox'
-import ReactDOM from 'react-dom'
 
 describe('HeaderBox', () => {
   test('renders correctly', () => {
