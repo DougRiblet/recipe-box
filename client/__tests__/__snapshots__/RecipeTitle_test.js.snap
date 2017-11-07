@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RecipeTitle renders correctly 1`] = `
+<li
+  onClick={[Function]}
+>
+  string
+</li>
+`;

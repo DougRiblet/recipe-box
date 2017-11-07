@@ -1,7 +1,7 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
 import HeaderBox from '../components/HeaderBox'
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom'
 
 describe('HeaderBox', () => {
   test('renders correctly', () => {
@@ -16,6 +16,3 @@ describe('HeaderBox', () => {
     ReactDOM.render(<HeaderBox />, div)
   })
 })
-
-
-
