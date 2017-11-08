@@ -30,8 +30,9 @@ describe('RecipeTitle', () => {
       key={'0123456'}
       title={'Kind Veggie Burrito'}
       changeActiveRecipe={() => changeActiveRecipe('0123456')}
-    />)
-    const displayedLI = <li onClick={changeActiveRecipe}>Kind Veggie Burrito</li>
-    expect(sampleComponent.contains(displayedLI)).toEqual(true)
+    />).html()
+    console.log('sampleComponent:', sampleComponent)
+    const displayedLI = '<li>Kind Veggie Burrito</li>'
+    expect(sampleComponent).toEqual(displayedLI)
   })
 })
