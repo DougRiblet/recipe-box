@@ -31,7 +31,6 @@ describe('RecipeTitle', () => {
       title={'Kind Veggie Burrito'}
       changeActiveRecipe={() => changeActiveRecipe('0123456')}
     />).html()
-    console.log('sampleComponent:', sampleComponent)
     const displayedLI = '<li>Kind Veggie Burrito</li>'
     expect(sampleComponent).toEqual(displayedLI)
   })
