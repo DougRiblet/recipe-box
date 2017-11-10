@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPaneDumb Snapshot 1`] = `
+<div
+  id="contentDisplay"
+>
+  <h1>
+    Grilled Cheese Sandwich
+  </h1>
+  <div
+    id="ing-column"
+  >
+    <h4>
+      Ingredients
+    </h4>
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>2 slices bread</p>
+<p>1 slice cheese</p>
+<p>2 dollops butter</p>
+",
+        }
+      }
+    />
+  </div>
+  <div
+    id="dir-column"
+  >
+    <h4>
+      Directions
+    </h4>
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>Spread butter on bread</p>
+<p>Place cheese between bread slices</p>
+<p>Grill in pan until bread is lightly browned on both sides</p>
+",
+        }
+      }
+    />
+    <h4>
+      Notes
+    </h4>
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>Yum yum!</p>
+",
+        }
+      }
+    />
+  </div>
+  <div
+    className="mainPaneButtons"
+  >
+    <button
+      className="setModeButton"
+      onClick={[Function]}
+    >
+      Edit Recipe
+    </button>
+  </div>
+</div>
+`;
