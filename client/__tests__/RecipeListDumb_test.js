@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 import RecipeListDumb from '../components/RecipeListDumb'
 
 describe('RecipeListDumb', () => {
-  test('renders correctly', () => {
+  test('Snapshot', () => {
     let dummyRecipeTitles = [{id: '101010', title: 'Grilled Cheese Sandwich'}]
     const RecipeListDumb_tree = renderer.create(
       <RecipeListDumb

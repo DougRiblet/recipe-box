@@ -4,7 +4,7 @@ import renderer from 'react-test-renderer'
 import HeaderBox from '../components/HeaderBox'
 
 describe('HeaderBox', () => {
-  test('renders correctly', () => {
+  test('Snapshot', () => {
     const HeaderBox_tree = renderer.create(
       <HeaderBox />
     ).toJSON()

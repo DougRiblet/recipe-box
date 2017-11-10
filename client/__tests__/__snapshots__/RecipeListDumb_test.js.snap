@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RecipeListDumb renders correctly 1`] = `
+exports[`RecipeListDumb Snapshot 1`] = `
 <div
   id="recipe-list-div"
 >

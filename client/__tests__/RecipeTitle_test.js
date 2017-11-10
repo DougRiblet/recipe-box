@@ -5,7 +5,7 @@ import { shallow } from 'enzyme'
 import RecipeTitle from '../components/RecipeTitle'
 
 describe('RecipeTitle', () => {
-  test('renders correctly', () => {
+  test('Snapshot', () => {
     const RecipeTitle_tree = renderer.create(
       <RecipeTitle
         key={'0123456'}

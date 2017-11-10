@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddButtonDumb Snapshot 1`] = `
+<div
+  id="add-recipe-div"
+>
+  <button
+    id="addRecipeButton"
+    onClick={[Function]}
+  >
+    Add New Recipe
+  </button>
+</div>
+`;
