@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
 import MainPaneDumb from '../components/MainPaneDumb'
 import initialState from '../initialState/initialState'
 
@@ -29,5 +30,37 @@ describe('MainPaneDumb', () => {
       setMode={() => setMode()}
       deleteRecipe={() => deleteRecipe()}
     />, div)
+  })
+
+  test('should display proper headings', () => {
+    const sampleComponent = shallow(<MainPaneDumb
+      mode={initialState.mode}
+      recipe={initialState.recipes[0]}
+      deleteAllowed={true}
+      updateRecipe={() => updateRecipe()}
+      setMode={() => setMode()}
+      deleteRecipe={() => deleteRecipe()}
+    />).html()
+    const recipeHeadIng = '<h4>Ingredients</h4>'
+    const recipeHeadDir = '<h4>Directions</h4>'
+    expect(sampleComponent).toContain(recipeHeadIng)
+    expect(sampleComponent).toContain(recipeHeadDir)
+  })
+
+  test('should display text of passed recipe', () => {
+    const sampleComponent = shallow(<MainPaneDumb
+      mode={initialState.mode}
+      recipe={initialState.recipes[0]}
+      deleteAllowed={true}
+      updateRecipe={() => updateRecipe()}
+      setMode={() => setMode()}
+      deleteRecipe={() => deleteRecipe()}
+    />).html()
+    const recipeTtl = '<h1>Grilled Cheese Sandwich</h1>'
+    const recipeIng = '<p>2 slices bread</p>'
+    const recipeDir = '<p>Grill in pan until bread is lightly browned on both sides</p>'
+    expect(sampleComponent).toContain(recipeTtl)
+    expect(sampleComponent).toContain(recipeIng)
+    expect(sampleComponent).toContain(recipeDir)
   })
 })
