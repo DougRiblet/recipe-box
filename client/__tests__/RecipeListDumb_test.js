@@ -33,4 +33,14 @@ describe('RecipeListDumb', () => {
     />)
     expect(wrapper.length).toEqual(1)
   })
+
+  test('should display passed recipe title as list item', () => {
+    let dummyRecipeTitles = [{id: '101010', title: 'Grilled Cheese Sandwich'}]
+    const sampleComponent = shallow(<RecipeListDumb
+      recipeTitles={dummyRecipeTitles}
+      changeActiveRecipe={() => changeActiveRecipe('010101')}
+    />).html()
+    const recipeTitleListItem = '<li>Grilled Cheese Sandwich</li>'
+    expect(sampleComponent).toContain(recipeTitleListItem)
+  })
 })

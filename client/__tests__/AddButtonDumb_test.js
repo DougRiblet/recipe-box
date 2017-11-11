@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
 import AddButtonDumb from '../components/AddButtonDumb'
 
 describe('AddButtonDumb', () => {
@@ -18,5 +19,13 @@ describe('AddButtonDumb', () => {
     ReactDOM.render(<AddButtonDumb
       addRecipe={() => addRecipe()}
     />, div)
+  })
+
+  test('should display add Recipe button', () => {
+    const sampleComponent = shallow(<AddButtonDumb
+      addRecipe={() => addRecipe()}
+    />).html()
+    const addRecipeButton = '<button id="addRecipeButton">Add New Recipe</button>'
+    expect(sampleComponent).toContain(addRecipeButton)
   })
 })
