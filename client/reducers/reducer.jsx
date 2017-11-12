@@ -1,5 +1,6 @@
 
 import initialState from '../initialState/initialState'
+import { ADD_RECIPE, CHANGE_ACTIVE_RECIPE, SET_MODE, UPDATE_RECIPE, DELETE_RECIPE } from '../actions/actionTypes'
 
 const reducer = (state = {}, action) => {
   switch (action.type) {
@@ -8,7 +9,7 @@ const reducer = (state = {}, action) => {
       if (!savedData.hasOwnProperty('recipes')) { savedData = initialState }
       return {...state, ...savedData}
 
-    case 'ADD_RECIPE':
+    case ADD_RECIPE:
       return Object.assign({}, state, {
         recipes: state.recipes.concat({
           id: action.id,
@@ -21,18 +22,18 @@ const reducer = (state = {}, action) => {
         active: action.active
       })
 
-    case 'CHANGE_ACTIVE_RECIPE':
+    case CHANGE_ACTIVE_RECIPE:
       return Object.assign({}, state, {
         active: action.id,
         mode: 'display'
       })
 
-    case 'SET_MODE':
+    case SET_MODE:
       return Object.assign({}, state, {
         mode: action.mode
       })
 
-    case 'UPDATE_RECIPE':
+    case UPDATE_RECIPE:
       let newObj = state.recipes.map(function (rec) {
         if (rec.id === action.recipe.id) {
           rec.title = action.recipe.title
@@ -48,7 +49,7 @@ const reducer = (state = {}, action) => {
         active: action.active
       })
 
-    case 'DELETE_RECIPE':
+    case DELETE_RECIPE:
       let fewerRecipes = state.recipes.filter(rec => rec.id !== action.id)
       let newActive = fewerRecipes[0].id
       return Object.assign({}, state, {
