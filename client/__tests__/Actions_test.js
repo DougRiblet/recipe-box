@@ -11,4 +11,14 @@ describe('Action Creators', () => {
     }
     expect(actions.changeActiveRecipe(idString)).toEqual(expectedAction)
   })
+
+  test('call action to set mode (display or edit)', () => {
+    const newMode = 'edit'
+    const expectedAction = {
+      type: types.SET_MODE,
+      mode: newMode
+    }
+    expect(actions.setMode(newMode)).toEqual(expectedAction)
+  })
+
 })
