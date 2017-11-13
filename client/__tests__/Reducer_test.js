@@ -8,7 +8,7 @@ describe('Action Creators', () => {
     expect(reducer(initialState, {})).toEqual(initialState)
   })
 
-  test('process SET_MODE action correctly', () => {
+  test('process setMode action correctly', () => {
     let actionSetModeToEdit = actions.setMode('edit')
     expect(reducer(initialState, actionSetModeToEdit)).toEqual({
       active: '101010',
@@ -23,6 +23,12 @@ describe('Action Creators', () => {
         }
       ]
     })
+  })
+
+  test('process changeActiveRecipe action correctly', () => {
+    let actionchangeActiveRecipe = actions.changeActiveRecipe('975386')
+    let { active } = reducer(initialState, actionchangeActiveRecipe)
+    expect(active).toEqual('975386')
   })
 
 })
