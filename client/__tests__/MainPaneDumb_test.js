@@ -11,7 +11,7 @@ describe('MainPaneDumb', () => {
       <MainPaneDumb
         mode={initialState.mode}
         recipe={initialState.recipes[0]}
-        deleteAllowed={true}
+        deleteAllowed
         updateRecipe={() => updateRecipe()}
         setMode={() => setMode()}
         deleteRecipe={() => deleteRecipe()}
@@ -25,7 +25,7 @@ describe('MainPaneDumb', () => {
     ReactDOM.render(<MainPaneDumb
       mode={initialState.mode}
       recipe={initialState.recipes[0]}
-      deleteAllowed={true}
+      deleteAllowed
       updateRecipe={() => updateRecipe()}
       setMode={() => setMode()}
       deleteRecipe={() => deleteRecipe()}
@@ -36,7 +36,7 @@ describe('MainPaneDumb', () => {
     const sampleComponent = shallow(<MainPaneDumb
       mode={initialState.mode}
       recipe={initialState.recipes[0]}
-      deleteAllowed={true}
+      deleteAllowed
       updateRecipe={() => updateRecipe()}
       setMode={() => setMode()}
       deleteRecipe={() => deleteRecipe()}
@@ -53,7 +53,7 @@ describe('MainPaneDumb', () => {
     const sampleComponent = shallow(<MainPaneDumb
       mode={initialState.mode}
       recipe={initialState.recipes[0]}
-      deleteAllowed={true}
+      deleteAllowed
       updateRecipe={() => updateRecipe()}
       setMode={() => setMode()}
       deleteRecipe={() => deleteRecipe()}
@@ -72,7 +72,7 @@ describe('MainPaneDumb', () => {
     const sampleComponent = shallow(<MainPaneDumb
       mode={initialState.mode}
       recipe={initialState.recipes[0]}
-      deleteAllowed={true}
+      deleteAllowed
       updateRecipe={() => updateRecipe()}
       setMode={() => setMode()}
       deleteRecipe={() => deleteRecipe()}

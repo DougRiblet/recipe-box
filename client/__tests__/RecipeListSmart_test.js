@@ -1,6 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import renderer from 'react-test-renderer'
 import { shallow } from 'enzyme'
 import configureStore from 'redux-mock-store'
 import RecipeListSmart from '../components/RecipeListSmart'
@@ -10,7 +8,7 @@ describe('RecipeListSmart', () => {
   const mockStore = configureStore()
   let store, container
 
-  beforeEach(()=>{
+  beforeEach(() => {
     store = mockStore(initialState)
     container = shallow(<RecipeListSmart store={store} />)
   })

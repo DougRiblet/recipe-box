@@ -41,5 +41,4 @@ describe('Action Creators', () => {
     }
     expect(actions.deleteRecipe(idString)).toEqual(expectedAction)
   })
-
 })
