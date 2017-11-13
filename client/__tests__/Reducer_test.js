@@ -1,4 +1,3 @@
-import * as types from '../actions/actionTypes'
 import * as actions from '../actions/actions'
 import reducer from '../reducers/reducer'
 import initialState from '../initialState/initialState'
@@ -30,5 +29,4 @@ describe('Action Creators', () => {
     let { active } = reducer(initialState, actionchangeActiveRecipe)
     expect(active).toEqual('975386')
   })
-
 })
